@@ -26,6 +26,9 @@ jobs:
           flutter-version: '3.22.0' # You can change this to latest stable if needed
           channel: 'stable'
 
+      - name: Generate Flutter Scaffolding
+        run: flutter create .
+
       - name: Get Dependencies
         run: flutter pub get
 

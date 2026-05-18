@@ -11,9 +11,9 @@ void main() async {
 }
 
 // ⚠️ EDIT THESE VARIABLES WITH YOUR GOOGLE FORM SECRETS FROM STEP 1
-const String googleFormBaseUrl = 'https://docs.google.com/forms/d/e/YOUR_FORM_ID_HERE/formResponse';
-const String emojiFieldId = 'entry.111111111'; 
-const String activityFieldId = 'entry.222222222';
+const String googleFormBaseUrl = 'https://docs.google.com/forms/d/e/1FAIpQLScU_wh6vn0MmTkVP8Jakc-CTgwR-GEzjY73M3pHxutgJ5Vd0w/formResponse';
+const String emojiFieldId = 'entry.1044774377'; 
+const String activityFieldId = 'entry.85606868';
 
 class MyApp extends StatelessWidget {
   const MyApp({super.key});

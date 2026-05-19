@@ -32,6 +32,10 @@ jobs:
       - name: Generate Flutter Scaffolding
         run: flutter create .
 
+      - name: Add Android Permissions
+        run: |
+          perl -pi -e 's|</manifest>|    <uses-permission android:name="android.permission.INTERNET"/>\n    <uses-permission android:name="android.permission.SCHEDULE_EXACT_ALARM"/>\n    <uses-permission android:name="android.permission.USE_EXACT_ALARM"/>\n</manifest>|' android/app/src/main/AndroidManifest.xml
+
       - name: Get Dependencies
         run: flutter pub get
 

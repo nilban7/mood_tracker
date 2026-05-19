@@ -117,13 +117,17 @@ class _HomeScreenState extends State<HomeScreen> {
     setState(() { isSubmitting = true; });
 
     try {
-      await http.post(
+      final response = await http.post(
         Uri.parse(googleFormBaseUrl),
         body: {
           emojiFieldId: selectedEmoji,
           activityFieldId: _activityController.text,
         },
       );
+
+      if (response.statusCode != 200) {
+        throw Exception('Failed with status code: ${response.statusCode}');
+      }
 
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(content: Text('Submitted! Have a wonderful hour! ✨❤️')),

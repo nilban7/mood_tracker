@@ -139,7 +139,7 @@ class _HomeScreenState extends State<HomeScreen> {
       });
     } catch (e) {
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('Error saving data. Check connection!')),
+        SnackBar(content: Text('Error: ${e.toString().replaceAll('Exception: ', '')}')),
       );
     } finally {
       setState(() { isSubmitting = false; });
